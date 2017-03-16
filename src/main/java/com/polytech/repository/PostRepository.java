@@ -1,6 +1,6 @@
-package repository;
+package com.polytech.repository;
 
-import business.Post;
+import com.polytech.business.Post;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package business;
+package com.polytech.business;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.PostRepository;
+import com.polytech.repository.PostRepository;
 
 import java.util.List;
 

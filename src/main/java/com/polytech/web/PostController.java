@@ -1,7 +1,7 @@
-package web;
+package com.polytech.web;
 
-import business.Post;
-import business.PublicationService;
+import com.polytech.business.Post;
+import com.polytech.business.PublicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

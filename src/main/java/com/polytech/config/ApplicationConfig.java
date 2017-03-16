@@ -1,4 +1,4 @@
-package config;
+package com.polytech.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @PropertySource("classpath:/application.properties")
-@ComponentScan(basePackages = {"com.polytech.repository","com.polytech.business"})
+@ComponentScan({"com.polytech.repository","com.polytech.business","com.polytech.web"})
 public class ApplicationConfig {
     @Value("${datasource.driverName}")
     private String driverClassName;

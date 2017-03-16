@@ -1,4 +1,4 @@
-package business;
+package com.polytech.business;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package business;
+package com.polytech.business;
 
 /**
  * Created by daivietquochoang on 16/03/2017.
