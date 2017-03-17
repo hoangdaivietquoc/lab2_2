@@ -22,13 +22,13 @@ public class PostController {
     @RequestMapping(value = "/share", method = RequestMethod.POST)
     public String publishPost(Post post) {
         publicationService.post(post);
-        return "redirect:/feed";
+        return "redirect:/feed2";
     }
 
-    @RequestMapping(value = "/feed", method = RequestMethod.GET)
+    @RequestMapping(value = "/feed2", method = RequestMethod.GET)
     public String fetchAllFeeds(Model model) {
         List<Post> posts = publicationService.fetchAll();
         model.addAttribute("posts", posts);
-        return "feed";
+        return "feed2";
     }
 }
