@@ -1,1 +1,1 @@
-web: java -jar target/lab2-1.0.jar --spring.profiles.active=DEV --server.port=$PORT
+web: java -jar target/lab2-1.0-SNAPSHOT.jar --spring.profiles.active=DEV --server.port=$PORT
