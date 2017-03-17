@@ -46,6 +46,7 @@ public class ApplicationConfig {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
                 .addScript("create-schema.sql")
+                .addScript("default-users.sql")
                 .build();
     }
 
