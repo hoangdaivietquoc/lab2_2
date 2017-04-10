@@ -2,7 +2,9 @@ package com.polytech.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.*;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
@@ -14,6 +16,8 @@ import javax.sql.DataSource;
 @Configuration
 @PropertySource("classpath:/application.properties")
 @ComponentScan({"com.polytech.repository","com.polytech.business","com.polytech.web"})
+@EntityScan("com.polytech.business")
+@EnableJpaRepositories("com.polytech.repository")
 public class ApplicationConfig {
     @Value("${datasource.driverName}")
     private String driverClassName;

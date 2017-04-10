@@ -1,10 +1,20 @@
 package com.polytech.business;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * Created by daivietquochoang on 16/03/2017.
  */
-public class Post {
+@Entity
+@Table(name = "POST")
+public class Post implements Serializable {
+    @Id
+    @Column(name="ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Long id;
 
+    @Column(name="CONTENT")
     private String content;
 
     public Post() {
@@ -27,5 +37,13 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
