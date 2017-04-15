@@ -11,20 +11,17 @@ import java.io.Serializable;
 public class Post implements Serializable {
     @Id
     @Column(name="ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment in sql
     private  Long id;
 
     @Column(name="CONTENT")
     private String content;
 
-    public Post() {
-    }
+    public Post() {}
 
     @Override
     public String toString() {
-        return "Post{" +
-                "content='" + content + '\'' +
-                '}';
+        return "Post{" + "content='" + content + '\'' + '}';
     }
 
     public Post(String content) {

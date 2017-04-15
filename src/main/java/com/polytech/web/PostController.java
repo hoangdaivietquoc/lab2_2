@@ -24,13 +24,13 @@ public class PostController {
     public String publishPost(Post post, Principal principal) {
         String username = principal.getName();
         publicationService.post(post);
-        return "redirect:/feed2";
+        return "redirect:/feed";
     }
 
-    @RequestMapping(value = "/feed2", method = RequestMethod.GET)
+    @RequestMapping(value = "/feed", method = RequestMethod.GET)
     public String fetchAllFeeds(Model model) {
         List<Post> posts = publicationService.fetchAll();
         model.addAttribute("posts", posts);
-        return "feed2";
+        return "feed";
     }
 }
