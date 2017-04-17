@@ -29,10 +29,10 @@ public class RegistrationController {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userService.saveUser(user);
         List<User> lsUser= userService.findAll();
-        System.out.println(lsUser.size());
+        /*System.out.println(lsUser.size());
         for(int i=0;i<lsUser.size();i++){
             System.out.println(lsUser.get(i));
-        }
+        }*/
         return "redirect:feed";
     }
 }

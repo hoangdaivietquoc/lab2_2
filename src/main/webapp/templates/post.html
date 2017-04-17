@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>New Feed</title>
+    <title>Post</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
@@ -64,39 +64,20 @@
     <form th:action="@{/logout}" method="post">
         <input type="submit" value="logout"/>
     </form>
-   <!-- <form method="POST" th:action='@{/share}'>
-        what's on your mind ? <textarea name="content"></textarea>
-        <input type="submit" value="Share" id="btnShare"/>
-    </form>-->
-
-    <div id="divShare">
-        what's on your mind ? <textarea name="content" id="txtaContent"></textarea>
-        <input type="button" value="Share" id="btnShare"/>
+    <div id="divPost">
+        <p id="PostId"></p>
+        <p id="PostUsername"></p>
+        <p id="PostContent"></p>
+    </div>
+    <h4>--------------------------------</h4>
+    <div id="divShowComments">
 
     </div>
-
-    <h3>-----------Like-----------</h3>
-    <div id="divShowLike"></div>
-    <h3>-----------POST-----------</h3>
-
-    <div id="divCommand">
-        Select Id and action: <select id="seId">
-        <option value="value1">1</option>
-        <option value="value2">2</option>
-    </select>
-        <select id="seLC">
-            <option value="likeUnlike">Like or unlike</option>
-            <option value="comment">Comment</option>
-        </select>
-        <input type="button" id="btnGo" value="Go"/>
+    <div id="divComment">
+        Type comment here: <textarea name="content" id="txtaContent"></textarea>
+        <input type="button" value="Comment" id="btnComment"/>
     </div>
-    <div id="divShowFeedTest"></div>
 
-
- <!--   <div th:each="post :${posts}">
-        <label th:text="${post.getUsername()}"></label>
-        <p th:text="${post.getContent()}"></p>
-    </div>-->
 </div><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
@@ -104,7 +85,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="/assets/js/feed.js"></script>
+<script src="/assets/js/post.js"></script>
 </body>
 </html>
 

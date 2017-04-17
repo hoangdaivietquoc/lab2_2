@@ -10,18 +10,20 @@ import java.io.Serializable;
 @Table(name = "POST")
 public class Post implements Serializable {
     @Id
-    @Column(name="ID")
+    @Column(name="idPost")
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment in sql
     private  Long id;
 
     @Column(name="CONTENT")
     private String content;
 
+    @Column(name="username")
+    private String username;
     public Post() {}
 
     @Override
     public String toString() {
-        return "Post{" + "content='" + content + '\'' + '}';
+        return "idPost = "+id+" username "+username+" Post{" + "content= " + content +" }";
     }
 
     public Post(String content) {
@@ -42,5 +44,13 @@ public class Post implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

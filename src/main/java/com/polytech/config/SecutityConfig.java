@@ -35,7 +35,7 @@ public class SecutityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         LogoutConfigurer<HttpSecurity> logout =
-                http.authorizeRequests()
+                http.csrf().disable().authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/registration").permitAll()
                 .antMatchers("/index").permitAll()

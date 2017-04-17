@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User findByUsername(User user){
-        System.out.println("this is method findByUsername in UserServiceImpl");
         return null;
     }
 
